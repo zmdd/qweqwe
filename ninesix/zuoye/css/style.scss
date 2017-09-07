@@ -1,0 +1,226 @@
+@charset "UTF-8";@import "reset.css";body,html{   font-size: 14px;    width:100%;       height:100%;       font-family: "微软雅黑";       min-width:320px;}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrap{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction:column;
+	background: #F4F4F4;
+}
+
+.header{
+	height: .35rem;
+	background: #FF8201;
+	text-align: center;
+	line-height: .35rem;
+	position: relative;
+	span{
+		font-size: .16rem;
+		color: #fff;
+	}
+	a{
+		position: absolute;
+		right: .1rem;
+		color: #fff;
+	}
+}
+section{
+    overflow-y: auto;
+    flex-grow: 1;
+    .box{
+        width: 100%;
+        margin-top: .2rem;
+        background: #f4f4f4;
+        .box-menu,.box-menus{
+            width: 100%;
+            height:1.4rem;
+            background: white;
+            margin-top: .2rem;
+            .box-nav{
+                width: 100%;
+                height: .45rem;
+                border-bottom:1px solid #dcdcdc;
+                display: flex;
+                position: relative;
+                line-height: .59rem;
+                input{
+                    display: none;
+                }
+                label{
+                    display: inline-block;
+                    position: absolute;
+                    width:15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    border:1px solid #ccc;
+                    top: 15px;
+                    left: 10px;
+                }           
+		        input:checked+label{
+		        	background: #ff5000;
+		        }
+                span{
+			        display: inline-block;
+			        position: absolute;
+			        width:16px;
+			        height: 16px;
+			        background: url(../images/icon1_03.jpg) no-repeat;
+			        background-size: 100% 100%;
+			        top:16px;
+			        left: 35px;
+		        }          
+		        a{
+		        	position: absolute;
+		        	font-size: 10px;
+		        	color:#343a3d;
+                    top:8px;
+		        	left: 60px;
+		        	line-height: 34px;
+		        }
+                b{
+                    margin-left: .05rem;
+                    color: #c0c0c0;
+                }
+            } 
+            .box-cont{
+                position: relative;
+                background: #fff;
+                input{
+                    display: none;
+                }
+                .money{
+                    color: orange;
+                }
+                label{
+                    display: inline-block;
+                    position: absolute;
+                    width:15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    border:1px solid #ccc;
+                    top: 15px;
+                    left: 10px;
+                }           
+		        input:checked+label{
+		        	background: #ff5000;
+		        }
+                dl{
+                    width:90%;
+                    display:flex;
+                    margin-left: 10%;
+                    dt{
+                        width:.6rem;;
+                        height:.6rem;  
+                        margin-top:.15rem;  
+                        img{
+                            width:100%;
+                            height:100%;
+                        }
+                    }
+                    dd{
+                        width:100%;
+                        margin-left: .1rem;
+                        font-size: .14rem;    
+                        margin-top:.1rem;     
+                        .con{
+                            margin-top:.1rem;
+                            b{
+                                float:right;
+                                margin-right: .1rem;
+                                color: #989898;
+                                font-size: .12rem;
+                                font-weight: normal;
+                            }
+                        }         
+                    }
+
+                }
+            }          
+        }
+    }
+}
+.footer{
+    width: 100%;
+    height: .9rem;
+    .footer-top{
+		width:100%;
+		height: 44px;
+        border-top:1px solid #dcdcdc;
+		background: white;
+		display: flex;
+		position: relative;
+		input{
+			display: none;
+		}
+		label{
+			display: inline-block;
+			position: absolute;
+			width:15px;
+			height: 15px;
+			border-radius: 50%;
+			border:1px solid #ccc;
+			top: 12px;
+			left: 10px;
+		}
+		input:checked+label{
+			background: #ff5000;
+		}
+		&>span{
+			display: inline-block;
+			font-size: 13px;
+			color: black;
+			padding-left:30px;
+			line-height: 42px;
+			font-weight: bold;
+		}
+		a{
+			display: inline-block;
+			position: absolute;
+			width:80px;
+			height: 42px;
+			background:#ff5000;
+			right: 0;
+			color: white;
+			line-height: 42px;
+			text-align: center;
+			font-size: 13px;
+            margin-top: .01rem;
+		}
+		h5{
+			position: absolute;
+			right:90px;
+			line-height: 42px;
+			&>span{
+				color:#ff5000;
+				padding-right: 10px;
+			}
+		}
+	}
+    .footer-bot{
+        width:100%;
+		height: 44px;
+        border-top:1px solid #dcdcdc;
+		background: white;
+		display: flex;
+        justify-content: space-around;
+        dl{
+            width: 20%;
+            height: .44rem;
+            text-align: center;
+            dt{              
+                margin-top: .02rem;
+            }
+            dd{
+                font-size: .12rem;
+                margin-top: .02rem;
+            }
+        }
+    }
+}

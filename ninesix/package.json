@@ -1,0 +1,17 @@
+{
+  "name": "ninesix",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-webserver": "^0.9.1",
+    "parse": "^1.10.0",
+    "webserver": "^3.1.11"
+  }
+}
