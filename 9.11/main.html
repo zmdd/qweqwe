@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="" href="http://cdn.bootcss.com/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app" id="app">
+    <div id="apps">
+
+    </div>
+    </div>
+    <template id="tem">
+        <div class="aa">
+            <transition enter-active-class="animated bounce" leave-active-class="animated bounce">
+            <!-- <transition enter-active-class="animated bounce" leave-active-class="animated bounce"> -->
+                <div v-if="state">
+                    <div>
+                        <label for="user">用户名</label><input type="text" id="user" placeholder="请输入用户名" v-model="username">
+                    </div>
+                    <p></p>
+                    <div>
+                        <label for="pass">设置密码</label><input type="password" id="password" placeholder="请输入密码" v-model="password">
+                    </div>
+                    <p></p>
+                    <div>
+                        <label for="sure">确认密码</label><input type="text" id="sure" placeholder="请再次输入密码" v-model="again">
+                    </div>
+                    <p></p>
+                    <div>
+                        <select name="" id="msg">
+                            <option value="china">中国+86</option>
+                            <option value="american">美国</option>
+                            <option value="canada">加拿大</option>
+                        </select>
+                    </div>
+                    <p></p>
+                    <div>
+                        <label for="login">验证码</label><input type="text" id="login" placeholder="请输入验证码" v-model="yzm">
+                    </div>
+                    <p></p>
+                    <div>
+                       <label for="phone">手机验证码</label><input type="text" id="phone" placeholder=" 请输入手机验证码" v-model.lazy="telyzm">
+                    </div>
+                    <p></p>
+                </div>   
+        </transition>
+        <transition name="fade">
+            <div>
+                <button class="btn" @click="fn">立即注册</button>
+            </div>
+        </transition>
+       
+        </div>
+    </template>
+<script src="js/vue.min.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#apps",
+        template: "#tem",
+        data: {
+            state: true,
+            telyzm:'',
+            username:'',
+            password:'',
+            again:'',
+            yzm:''
+        },
+        methods: {
+            fn() {
+                this.state = !this.state;
+                console.log('用户名:'+this.username+',密码:'+this.password+',再次设置密码:'+this.again+',验证码:'+this.yzm+',手机验证码:'+this.telyzm)
+            }
+        }
+    })
+</script>
+</body>
+</html>
